@@ -1,6 +1,6 @@
 Converts Rhythmbox playlist to m3u
 
-Assumes all musis is in single directory rhythmboxLibraryPath 
+Assumes all music is in single directory rhythmboxLibraryPath 
 
 Set 
 playlistPath - Where Rhythmbox playlists are stored 
