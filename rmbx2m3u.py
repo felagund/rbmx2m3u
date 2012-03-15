@@ -30,17 +30,19 @@ import os
 playlistPath = os.path.expanduser('~/.local/share/rhythmbox/playlists.xml')
 #rhythmboxLibraryPath = os.path.expanduser('~/Music') 
 rhythmboxLibraryPath = '/home/drew/Hudba' 
-rhythmboxPlaylistName = 'Oblibene'
+rhythmboxPlaylistName = ['Oblibene']
 n900LibraryPath = '/home/user/MyDocs/Music'
 
 rhythmboxPlaylistFile = open(playlistPath ,"r")
 rhythmboxPlaylist = ''.join(rhythmboxPlaylistFile.readlines())
-rhythmboxPlaylistFile.close() 
-n900playlistFile = open('' + rhythmboxLibraryPath + '/' + rhythmboxPlaylistName + '.m3u' ,'w+')
+rhythmboxPlaylistFile.close()
 
 tree=et.fromstring(rhythmboxPlaylist) 
-for i in tree.findall('playlist'):
-    if i.get('name') == rhythmboxPlaylistName:
-        for j in  i.findall('location'):
-            n900playlistFile.write(urllib.url2pathname(j.text)[7:].replace(rhythmboxLibraryPath, n900LibraryPath) + '\n')
-n900playlistFile.close()
+
+for playlist in rhythmboxPlaylistName:
+    n900playlistFile = open('' + rhythmboxLibraryPath + '/' + playlist + '.m3u' ,'w+')
+    for i in tree.findall('playlist'):
+        if i.get('name') == playlist:
+            for j in  i.findall('location'):
+                n900playlistFile.write(urllib.url2pathname(j.text)[7:].replace(rhythmboxLibraryPath, n900LibraryPath) + '\n')
+    n900playlistFile.close()

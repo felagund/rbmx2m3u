@@ -1,10 +1,10 @@
-Converts Rhythmbox playlist to m3u
+Converts Rhythmbox playlists to m3u
 
 Assumes all music is in single directory rhythmboxLibraryPath 
 
 Set 
 playlistPath - Where Rhythmbox playlists are stored 
 rhythmboxLibraryPath - Where you want your playlist to be created and where you store your music
-rhythmboxPlaylistName - Name of the playlist to be converted 
+rhythmboxPlaylistName - Name of the playlists to be converted 
 n900LibraryPath - Where you store your music on another device (if you want to just convert to m3u, set the same as rhythmboxLibraryPath)
 
