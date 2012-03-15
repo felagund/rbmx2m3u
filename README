@@ -6,5 +6,5 @@ Set
 playlistPath - Where Rhythmbox playlists are stored 
 rhythmboxLibraryPath - Where you want your playlist to be created and where you store your music
 rhythmboxPlaylistName - Name of the playlist to be converted 
-n900LibraryPath = Where you store your music on another device (if you want to just convert to m3u, set the same as rhythmboxLibraryPath)
+n900LibraryPath - Where you store your music on another device (if you want to just convert to m3u, set the same as rhythmboxLibraryPath)
 
